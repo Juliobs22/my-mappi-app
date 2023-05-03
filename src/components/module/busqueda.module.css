@@ -1,0 +1,27 @@
+.searchBar {
+    max-width: 100%;
+    margin: 20px auto;
+    display: flex;
+}
+
+input {
+    flex: 1 0px;
+    margin: 0 1px;
+    font-size: 14px;
+    padding: 8px;
+    border: 1.5px solid #5BC0EB;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus{
+    border: 1.5px solid #60eb5b;
+}
+
+.btnSearchLoup {
+    background-color: #5BC0EB;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 8px;
+}

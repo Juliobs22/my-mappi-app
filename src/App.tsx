@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { LugaresProvider } from './context';
 import Inicio from './components/Inicio';
 

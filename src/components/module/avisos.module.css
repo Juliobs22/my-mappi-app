@@ -1,0 +1,35 @@
+.content {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.btn-card {
+    background-color: aqua;
+    color: aliceblue;
+    padding: 8px;
+    font-size: 12px;
+}
+.cardItem {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+}
+.cardList{
+    list-style: none;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.cardImg{
+    width: 100%;
+    max-height: 150px;
+}
+
+.cardButton {
+    padding: 8px;
+    font-size: 13px;
+    background-color: #E0CA3C;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
