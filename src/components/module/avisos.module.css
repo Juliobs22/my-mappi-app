@@ -33,3 +33,21 @@
     outline: none;
     border-radius: 8px;
 }
+
+.sliderControls{
+    width: 100%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slideButton{
+    margin: 0 2.5px;
+    padding: 12px;
+    font-size: 0.78rem;
+    background-color: #E0CA3C;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+}

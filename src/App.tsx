@@ -1,11 +1,13 @@
-import { LugaresProvider } from './context';
+import { LugaresProvider, MapProvider } from './context';
 import Inicio from './components/Inicio';
 
 
 function App() {
   return (
     <LugaresProvider>
-      <Inicio/>
+      <MapProvider>
+        <Inicio />
+      </MapProvider>
     </LugaresProvider>
   );
 }
