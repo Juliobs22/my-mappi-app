@@ -1,0 +1,33 @@
+.menuBar {
+    width: 350px;
+    padding: 18px;
+    position: fixed;
+    margin: auto;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 111;
+    background-color: #30323E;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btnMenu {
+    cursor: pointer;
+    background-color: #30323E;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+}
+
+.btnMenu:hover {
+    color: #5BC0EB;
+}
+
+@media only screen and (max-width: 500px) {
+    .menuBar {
+        width: 90%;
+    }
+  }

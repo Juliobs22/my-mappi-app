@@ -1,4 +1,4 @@
-import { Map } from "mapbox-gl";
+import { Map, Marker, Popup } from "mapbox-gl";
 import { MapContext } from "./MapContext";
 import { useReducer } from "react";
 import MapReducer from "./MapReducer";
@@ -21,6 +21,12 @@ const MapProvider = ({ children }:Props) => {
     const [state , dispach] = useReducer(MapReducer, INITIAL_STATE);
 
     function setMapa(mapa:Map) {
+        const marcador = new Marker({ color: '#F86624' });
+        const msgPopUp = new Popup({ closeOnClick: false });
+        msgPopUp.setHTML('<h4>Este eres tu</h4><p>aqui se muestra tu bicacion en tiempo real</p>');
+        marcador.setLngLat(mapa.getCenter());
+        marcador.addTo(mapa);
+        marcador.setPopup(msgPopUp);
         dispach({type: 'setMap', playload: mapa})
     }
 
