@@ -1,6 +1,10 @@
+import { Places } from "../../interfaces/Places";
 import { LugaresState } from "./LugaresProvider";
 
-type LugaresAct = {type: 'setUserLocation', payload: [number, number]};
+type LugaresAct =
+| {type: 'setUserLocation', payload: [number, number]}
+| {type: 'setLoadingLugares'}
+| {type: 'setLugares', payload: Places[]}
 
 const LugaresReducer = (state: LugaresState, action: LugaresAct ) : LugaresState => {
     switch (action.type) {
@@ -9,7 +13,19 @@ const LugaresReducer = (state: LugaresState, action: LugaresAct ) : LugaresState
                 ...state,
                 isLoading: false,
                 location: action.payload
-            });     
+            }); 
+        case 'setLoadingLugares':
+            return({
+                ...state,
+                isLoadingLugares: true,
+                lugares: []
+            });    
+        case 'setLugares':
+            return({
+                ...state,
+                isLoadingLugares: false,
+                lugares: action.payload
+            });
         default:
             return state;
     }

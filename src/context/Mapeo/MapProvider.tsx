@@ -1,16 +1,19 @@
 import { Map, Marker, Popup } from "mapbox-gl";
 import { MapContext } from "./MapContext";
-import { useReducer } from "react";
+import { useReducer, useContext } from "react";
 import MapReducer from "./MapReducer";
+import { LugaresContext } from "../Lugares/LugaresContext";
 
 export interface MapState {
     isMapLoad: boolean;
     mapa?: Map,
+    markers: Marker[]
 }
 
 const INITIAL_STATE:MapState = {
     isMapLoad: false,
-    mapa: undefined
+    mapa: undefined,
+    markers: []
 }
 
 interface Props {
@@ -19,6 +22,7 @@ interface Props {
 
 const MapProvider = ({ children }:Props) => {
     const [state , dispach] = useReducer(MapReducer, INITIAL_STATE);
+    const { lugares } = useContext(LugaresContext)
 
     function setMapa(mapa:Map) {
         const marcador = new Marker({ color: '#F86624' });

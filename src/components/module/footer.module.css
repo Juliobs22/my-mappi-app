@@ -1,0 +1,27 @@
+.foot {
+    background-color: #343434;
+    color: #fff;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.imgLogoFoot {
+    width: 175px;
+}
+
+.aviPriv {
+    width: 340px;
+}
+
+.ulList {
+    list-style: none;
+    padding: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    .foot{
+        flex-direction: column-reverse;
+    }
+}

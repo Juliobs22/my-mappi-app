@@ -25,3 +25,32 @@ input:focus{
     border-radius: 6px;
     padding: 5px 8px;
 }
+
+.boxResults {
+    position: fixed;
+    width: 90%;
+    z-index: 222;
+}
+
+.resultItem{
+    padding: 12px;
+    background-color: azure;
+    margin: 1.2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultItem > button {
+    padding: 6px;
+    background-color: #5BC0EB;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .resultItem {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

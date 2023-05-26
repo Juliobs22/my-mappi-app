@@ -2,6 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import styles from './module/busqueda.module.css';
 import { ChangeEvent, useRef, useContext } from "react";
 import { LugaresContext } from "../context";
+import SearchResults from "./SearchResults";
 
 const BarraBusqueda = () => {
     const { searchPlaces } = useContext(LugaresContext);
@@ -18,12 +19,15 @@ const BarraBusqueda = () => {
     }
 
     return ( 
-        <div className={styles.searchBar}>
-            <input type='text' placeholder='¿A donde deseas ir?' onChange={onQueryRef}/>
-            <button className={styles.btnSearchLoup}>
-                <FaSearch/>
-            </button>
-        </div>
+        <>
+            <div className={styles.searchBar}>
+                <input type='text' placeholder='¿A donde deseas ir?' onChange={onQueryRef}/>
+                <button className={styles.btnSearchLoup}>
+                    <FaSearch/>
+                </button>
+            </div>
+            <SearchResults/>
+        </>
      );
 }
  
