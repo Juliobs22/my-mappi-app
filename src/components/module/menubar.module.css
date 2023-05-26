@@ -4,6 +4,7 @@
     position: fixed;
     margin: auto;
     bottom: 8px;
+    left: 32px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,4 +31,4 @@
     .menuBar {
         width: 90%;
     }
-  }
+}

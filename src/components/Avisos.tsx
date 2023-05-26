@@ -8,14 +8,14 @@ import styles from './module/avisos.module.css';
 
 const dataCard = [
     {
-        image:'https://api.unsplash.com/search/users?page=1&query=nas',
+        image:'https://res.cloudinary.com/dxqgwdirs/image/upload/v1654999551/cld-sample-4.jpg',
         title: 'Aviso No #',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
         pricingText: 'Ubicacion: ',
         features: ['lorem', 'ipsum is ammet', 'lorem ipsum',]
     },
     {
-        image: 'https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        image: 'https://res.cloudinary.com/dxqgwdirs/image/upload/v1685080119/descarga_okgqzd.avif',
         title: 'Aviso No #',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
         pricingText: 'Ubicacion: ',
@@ -103,7 +103,11 @@ const Avisos = ():JSX.Element => {
                 {dataCard.map((card,  index) => (
                     <div key={index} className={styles.cardItem}>
                         <h3>{card.title + (index+1)}</h3>
-                        <img className={styles.cardImg} src={card.image} alt={card.title.toUpperCase()} width='100' />
+                        <div className={styles.cardImg} style={{
+                            backgroundImage: `url(${card.image})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat'
+                        }}/>
                         <p>{card.description}</p>
                         <ul className={styles.cardList}>
                             {card.features.map((freature, i) => (

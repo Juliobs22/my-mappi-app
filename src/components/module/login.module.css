@@ -1,0 +1,41 @@
+.containLogin {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgLoager {
+    width: 35%;
+}
+
+.loginComponent {
+    width: 52%;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.btnLogger {
+    background-color: #E0CA3C;
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+.loginTitler{
+    color: #08415C;
+    border-bottom: 1.5px solid #F86624;
+}
+
+@media only screen and (max-width: 500px) {
+    .menuBar {
+        width: 90%;
+    }
+}
