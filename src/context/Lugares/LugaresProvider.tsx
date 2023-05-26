@@ -35,7 +35,7 @@ const LugaresProvider = ({children}:props) => {
                 code: query
             },
             headers: {
-                "Access-Control-Allow-Origin": "http://192.168.1.70/",
+                "Access-Control-Allow-Origin": "*",
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS'
             },
