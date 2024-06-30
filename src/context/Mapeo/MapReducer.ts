@@ -16,5 +16,4 @@ const MapReducer = (state: MapState, action: MapActions):MapState => {
             return state;
     }
 }
-
 export default MapReducer;
