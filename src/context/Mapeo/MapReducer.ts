@@ -16,4 +16,5 @@ const MapReducer = (state: MapState, action: MapActions):MapState => {
             return state;
     }
 }
+/**Comentario */
 export default MapReducer;
